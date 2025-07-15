@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Formula</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-font: 'IBM Plex Sans', Arial, sans-serif;
+      --text-color: #222;
+      --accent: #ff6f3c;
+      --bg: #fff;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--primary-font);
+      background: var(--bg);
+      color: var(--text-color);
+      height: 100%;
+      min-height: 100vh;
+      font-size: 1rem;
+    }
+    .container {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: row;
+    }
+    .left {
+      flex: 1 1 50%;
+      padding: 56px 40px 40px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+    }
+    .right {
+      flex: 1 1 50%;
+      background: #181c23;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .right img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: none;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+    .desc {
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+    .features {
+      margin-bottom: 40px;
+    }
+    .features b {
+      font-weight: 700;
+      display: block;
+      margin-top: 24px;
+      margin-bottom: 4px;
+    }
+    .subscribe {
+      margin-top: 24px;
+    }
+    .subscribe input[type="email"] {
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-right: 8px;
+      width: 240px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    .subscribe button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .subscribe button:hover {
+      background: #ff8c5a;
+    }
+    .subscribe .note {
+      display: block;
+      margin-top: 10px;
+      color: #666;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .left, .right {
+        flex: none;
+        width: 100%;
+        padding: 32px 16px;
+      }
+      .right img {
+        height: 320px;
+      }
+    }
+    @media (max-width: 600px) {
+      .left {
+        padding: 24px 8px;
+      }
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .right img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="left">
+      <h1>Color Formula</h1>
+      <div class="desc">
+        Color Formula is a framework to standardize the color extraction process. It uses a token-based approach, similar to color tokens, but instead of mapping to a fixed value, each token is a rule that pulls the right color from any image.
+      </div>
+      <div class="features">
+        Color Formula tackles and standardizes these challenges:
+        <b>Unified language</b>
+        <div>Define a token once and have it mean the same thing everywhere.Extracting colors like dominant, vibrant, muted, or contrast from any image consistently across platforms. This site will serve as an archive of every formula token and the logic behind its extraction.</div>
+        <b>Reusable libraries & plugins</b>
+        <div>Build tools around one common concept to streamline the design-to-development workflow.</div>
+        <b>Community-driven archive</b>
+        <div>Share and refine formulas together, growing an open library of extraction rules.</div>
+      </div>
+      <div>
+         Read our detailed document to learn why ColorFormula was built and the story behind it. Subscribe to our newsletter for updates. Next up we’re kicking things off with a Figma plugin (WIP) to launch this journey! <a href="#">Read Medium Article</a>
+      </div>
+      <div class="subscribe">
+
+       
+        <form style="margin-top:12px;">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <section class="right">
+      <img src="image.png" alt="Color Formula Illustration">
+    </section>
+  </div>
+</body>
+</html>
